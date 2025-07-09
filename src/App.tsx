@@ -9,7 +9,7 @@ import { ProfilePage } from './pages/ProfilePage'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/skill-tree">
       <div className="min-h-screen bg-gray-50">
         <Navigation />
         <main className="pt-16">

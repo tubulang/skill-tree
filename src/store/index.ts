@@ -60,7 +60,7 @@ interface AppState {
   setError: (error: string | null) => void
 }
 
-export const useAppStore = create<AppState>((set, get) => ({
+export const useAppStore = create<AppState>((set) => ({
   // User state
   user: null,
   setUser: (user) => set({ user }),

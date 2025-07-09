@@ -40,7 +40,7 @@ const mockTasks: Task[] = [
 ]
 
 export function TasksPage() {
-  const [tasks, setTasks] = useState<Task[]>(mockTasks)
+  const [tasks] = useState<Task[]>(mockTasks)
   const [filter, setFilter] = useState<'all' | 'todo' | 'in-progress' | 'completed'>('all')
   const [showAddTask, setShowAddTask] = useState(false)
 
@@ -215,6 +215,22 @@ export function TasksPage() {
           </div>
         )}
       </div>
+      
+      {/* Add Task Modal (placeholder) */}
+      {showAddTask && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg w-96">
+            <h3 className="text-lg font-semibold mb-4">新建任务</h3>
+            <p className="text-gray-600 mb-4">功能开发中...</p>
+            <button
+              onClick={() => setShowAddTask(false)}
+              className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
+            >
+              关闭
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

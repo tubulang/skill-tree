@@ -10,6 +10,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  base: '/skill-tree/', // GitHub repository name
   server: {
     port: 3000,
     open: true,

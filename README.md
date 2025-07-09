@@ -1,6 +1,13 @@
 # AI 技能树 - 智能学习与成长平台
 
+[![Deploy to GitHub Pages](https://github.com/tubulang/skill-tree/actions/workflows/deploy.yml/badge.svg)](https://github.com/tubulang/skill-tree/actions/workflows/deploy.yml)
+[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://tubulang.github.io/skill-tree/)
+
 一个基于 AI 的技能树系统，结合游戏化学习、任务管理和社交圈子功能，助力用户高效成长。
+
+## 🌐 在线演示
+
+🔗 **Live Demo**: https://tubulang.github.io/skill-tree/
 
 ## 🎯 项目特色
 
@@ -65,6 +72,49 @@ npm run build
 # 或
 pnpm build
 ```
+
+## 🚀 GitHub Pages 部署
+
+### 自动部署（推荐）
+
+项目已配置 GitHub Actions 自动部署：
+
+1. **推送代码到 GitHub**：
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+2. **启用 GitHub Pages**：
+   - 进入你的 GitHub 仓库设置页面
+   - 找到 "Pages" 设置
+   - 选择 "Deploy from a branch"
+   - 选择 `gh-pages` 分支
+   - 点击 "Save"
+
+3. **等待部署完成**：
+   - GitHub Actions 会自动构建并部署项目
+   - 部署完成后可以通过 `https://your-username.github.io/Skill-Tree/` 访问
+
+### 手动部署
+
+如果需要手动部署，可以使用以下命令：
+
+```bash
+# 方法1：使用部署脚本
+./deploy.sh
+
+# 方法2：使用 npm 脚本
+npm run deploy
+```
+
+### 部署配置说明
+
+- **base 路径**: 项目配置了 `/Skill-Tree/` 作为基础路径，适用于 GitHub Pages
+- **路由配置**: React Router 使用 `basename="/Skill-Tree"` 确保路由正常工作
+- **自动化部署**: 每次推送到 `main` 或 `master` 分支时自动触发部署
+- **构建优化**: 启用了 sourcemap 方便调试生产环境问题
 
 ## 📋 功能详情
 
